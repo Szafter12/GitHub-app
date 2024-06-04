@@ -18,20 +18,26 @@
     <main class="w-100">
         <section class="login d-flex">
             <div class="login__left overflow-hidden d-flex justify-content-center align-items-center">
-                <div class="login__left-content">
+                <div class="login__left-content w-75">
                     <p class="mb-5 text-primary text-nowrap bold fs-1"><img class="login-logo me-3"
                             src="./dist/img/logo_login.svg" alt=""> DataHub Manager
                     </p>
-                    <h1 class="bold mb-2">Zaloguj się do swojego konta</h1>
-                    <p class="text-secondary fs-4">Witamy ponownie wpisz dane do logowania</p>
+                    <div class="login__info">
+                        <h1 class="bold mb-2">Zaloguj się do swojego konta</h1>
+                        <p class="text-secondary fs-4">Witamy ponownie wpisz dane do logowania</p>
+                    </div>
                     <img class="login__waves d-none d-lg-block" src="./dist/img/waves.svg" alt="">
                     <form class="mt-5">
-                        <div class="mb-4">
-                            <input type="email" class="form-control py-4 px-4" id="email" aria-describedby="emailHelp"
+                        <div class="mb-4 input-div">
+                            <img class="input-icon input-icon--left" src="./dist/img/post-ico.png" alt="">
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
                                 placeholder="Adres E-mail">
                         </div>
-                        <div class="mb-4">
-                            <input type="password" class="form-control py-4 px-4" id="password" placeholder="Hasło">
+                        <div class="mb-4 input-div">
+                            <img class="input-icon input-icon--left" src="./dist/img/pass-ico.png" alt="">
+                            <button class="input-icon input-icon--right"><img src="./dist/img/pass-hide.png"
+                                    alt=""></button>
+                            <input type="password" class="form-control" id="password" placeholder="Hasło">
                         </div>
                         <div class="d-flex justify-content-between mt-5">
                             <div class="mb-4 form-check d-flex align-items-center gap-2">
