@@ -15,35 +15,38 @@
 </head>
 
 <body>
-    <main class="container">
+    <main class="container-fluid container-md">
         <section class="login d-flex">
-            <div class="login__left d-flex-center overflow-hidden">
-                <h1 class="mb-5 text-primary bold "><img src="./dist/img/logo_login.svg" alt=""> DataHub Manager
-                </h1>
-                <p class="bold mb-1">Zaloguj się do swojego konta</p>
-                <p class="fs-6 text-secondary">Witamy ponownie wpisz dane do logowania</p>
-                <img class="login__waves" src="./dist/img/waves.svg" alt="">
-                <form class="mt-5">
-                    <div class="mb-3">
-                        <input type="email" class="form-control py-3 px-4" id="email" aria-describedby="emailHelp"
-                            placeholder="Adres E-mail">
-                    </div>
-                    <div class="mb-3">
-                        <input type="password" class="form-control py-3 px-4" id="password" placeholder="Hasło">
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="mb-3 form-check d-flex align-items-center gap-2">
-                            <input type="checkbox" class="form-check-input" id="staySign">
-                            <label class="form-check-label" for="exampleCheck1"><span class="fs-6">Zapamiętaj
-                                    mnie</span></label>
+            <div class="login__left overflow-hidden d-flex justify-content-center align-items-center">
+                <div class="login__left-content">
+                    <p class="mb-5 text-primary text-nowrap bold fs-1"><img class="login-logo me-3"
+                            src="./dist/img/logo_login.svg" alt=""> DataHub Manager
+                    </p>
+                    <h1 class="bold mb-2">Zaloguj się do swojego konta</h1>
+                    <p class="text-secondary fs-4">Witamy ponownie wpisz dane do logowania</p>
+                    <img class="login__waves" src="./dist/img/waves.svg" alt="">
+                    <form class="mt-5">
+                        <div class="mb-4">
+                            <input type="email" class="form-control py-4 px-4" id="email" aria-describedby="emailHelp"
+                                placeholder="Adres E-mail">
                         </div>
-                        <div>
-                            <a href="#" class="fs-6 text-primary bold">Przypomnij hasło</a>
+                        <div class="mb-4">
+                            <input type="password" class="form-control py-4 px-4" id="password" placeholder="Hasło">
                         </div>
-                    </div>
+                        <div class="d-flex justify-content-between mt-5">
+                            <div class="mb-4 form-check d-flex align-items-center gap-2">
+                                <input type="checkbox" class="form-check-input" id="staySign">
+                                <label class="form-check-label fs-4" for="exampleCheck1"><span class="">Zapamiętaj
+                                        mnie</span></label>
+                            </div>
+                            <div>
+                                <a href="#" class="text-primary bold fs-4">Przypomnij hasło</a>
+                            </div>
+                        </div>
 
-                    <button type="submit" class="btn btn-primary w-100 py-3 px-2 mt-3">Zaloguj się</button>
-                </form>
+                        <button type="submit" class="btn btn-primary w-100 py-4 px-3 mt-4 fs-4">Zaloguj się</button>
+                    </form>
+                </div>
             </div>
             <div class="login__right bg-primary d-none d-lg-block">
                 <img src="./dist/img/login_right.svg" alt="">
