@@ -11,7 +11,30 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="./dist/css/style.min.css">
 
-    <title>Screen1</title>
+    <title>Screen2</title>
+    <style>
+        /* Stylizacja dla zagnieżdżonych dropdownów */
+        .dropdown-submenu {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3;
+        }
+
+        .dropdown-submenu>.dropdown-menu {
+            width: 100%;
+            top: 40px;
+            left: 50%;
+            margin-top: -1px;
+            transform: translateX(-50%);
+            border: 1px solid #22C55E;
+            border-top: none;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -105,7 +128,7 @@
     </div>
 </header>
     <main>
-        <div class="container main-section">
+        <div class="main-section">
             <h1 class="mb-5">
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb d-flex align-items-center">
@@ -136,41 +159,74 @@
                             <span class="me-5">Ścieżka</span>
                             <img src="./dist/img/btn-arrow.svg" alt="">
                         </button>
-                        <ul class="dropdown-menu w-100 fs-5 border-0 ">
-                            <li>
-                                <div class="dropdown">
-                                    <button
-                                        class="col-btn3 d-flex justify-content-between align-items-center btn text-black bg-white rounded-3 fs-5 dropdown-toggle"
-                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span class="me-5">Zaczyna sie od</span>
-                                        <img src="./dist/img/panel-arrow.svg" alt="">
-                                    </button>
-                                    <ul class="dropdown-menu w-100 fs-5 border-0">
-                                        <li><a class="dropdown-item" href="#">Zaczyna się od</a></li>
-                                        <li><a class="dropdown-item" href="#">Nie zaczyna się od</a></li>
-                                        <li><a class="dropdown-item" href="#">Równa się</a></li>
-                                        <li><a class="dropdown-item" href="#">Zawiera</a></li>
-                                        <li><a class="dropdown-item" href="#">Nie Zawiera</a></li>
-                                        <li><a class="dropdown-item" href="#">Kończy się na</a></li>
-                                        <li><a class="dropdown-item" href="#">Nie kończy się na</a></li>
-                                        <li><a class="dropdown-item" href="#">Pusty</a></li>
-                                        <li><a class="dropdown-item" href="#">Nie pusty</a></li>
-                                    </ul>
-                                </div>
+                        <ul class="dropdown-menu fs-5 border-0 ">
+                            <li class="dropdown-submenu">
+                                <button
+                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    Zaczyna się od
+                                    <img src="./dist/img/btn-arrow2.svg" alt=""></button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Równa się
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Pusty
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie pusty
+                                        </button>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <input
-                                    class="dropdown-item drop-input text-black bg-white rounded-3 fs-5 border border-primary py-3 px-3"
+                                    class="drop-input dropdown-item text-black bg-white rounded-3 fs-5 border border-primary py-4 px-4"
                                     type="text" placeholder="Wpisz wartość">
                             </li>
                             <li>
-                                <button class=" py-3 px-3 drop-btn--green text-white rounded-3 fs-5">
+                                <button class=" py-4 px-4 drop-btn--green text-white rounded-3 fs-5">
                                     <img src="./dist/img/accept.svg" alt="">
                                     Dodaj warunek
                                 </button>
                             </li>
                             <li>
-                                <button class=" py-3 px-3 drop-btn--red text-white rounded-3 fs-5">
+                                <button class=" py-4 px-4 drop-btn--red text-white rounded-3 fs-5">
                                     <img src="./dist/img/cancel.svg" alt="">
                                     Usuń warunek
                                 </button>
@@ -182,13 +238,81 @@
                             class="col-btn d-flex justify-content-between align-items-center btn border border-1 text-danger fs-5  border-danger dropdown-toggle"
                             style="background-color: #FEE2E2;" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span class="me-5">Ścieżka</span>
+                            <span class="me-5">Klaster via Folder</span>
                             <img src="./dist/img/btn-arrow.svg" alt="">
                         </button>
-                        <ul class="dropdown-menu w-100 fs-5">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu fs-5 border-0 ">
+                            <li class="dropdown-submenu">
+                                <button
+                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    Zaczyna się od
+                                    <img src="./dist/img/btn-arrow2.svg" alt=""></button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Równa się
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Pusty
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie pusty
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input
+                                    class="drop-input dropdown-item text-black bg-white rounded-3 fs-5 border border-primary py-4 px-4"
+                                    type="text" placeholder="Wpisz wartość">
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--green text-white rounded-3 fs-5">
+                                    <img src="./dist/img/accept.svg" alt="">
+                                    Dodaj warunek
+                                </button>
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--red text-white rounded-3 fs-5">
+                                    <img src="./dist/img/cancel.svg" alt="">
+                                    Usuń warunek
+                                </button>
+                            </li>
                         </ul>
                     </div>
                     <div class="dropdown">
@@ -196,13 +320,81 @@
                             class="col-btn d-flex justify-content-between align-items-center btn border border-1 text-danger fs-5  border-danger dropdown-toggle"
                             style="background-color: #FEE2E2;" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span class="me-5">Ścieżka</span>
+                            <span class="me-5">Kolumna</span>
                             <img src="./dist/img/btn-arrow.svg" alt="">
                         </button>
-                        <ul class="dropdown-menu w-100 fs-5">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu fs-5 border-0 ">
+                            <li class="dropdown-submenu">
+                                <button
+                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    Zaczyna się od
+                                    <img src="./dist/img/btn-arrow2.svg" alt=""></button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Równa się
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Pusty
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie pusty
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input
+                                    class="drop-input dropdown-item text-black bg-white rounded-3 fs-5 border border-primary py-4 px-4"
+                                    type="text" placeholder="Wpisz wartość">
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--green text-white rounded-3 fs-5">
+                                    <img src="./dist/img/accept.svg" alt="">
+                                    Dodaj warunek
+                                </button>
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--red text-white rounded-3 fs-5">
+                                    <img src="./dist/img/cancel.svg" alt="">
+                                    Usuń warunek
+                                </button>
+                            </li>
                         </ul>
                     </div>
                     <div class="dropdown">
@@ -210,13 +402,81 @@
                             class="col-btn d-flex justify-content-between align-items-center btn border border-1 text-danger fs-5  border-danger dropdown-toggle"
                             style="background-color: #FEE2E2;" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span class="me-5">Ścieżka</span>
+                            <span class="me-5">Kolumna</span>
                             <img src="./dist/img/btn-arrow.svg" alt="">
                         </button>
-                        <ul class="dropdown-menu w-100 fs-5">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu fs-5 border-0 ">
+                            <li class="dropdown-submenu">
+                                <button
+                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    Zaczyna się od
+                                    <img src="./dist/img/btn-arrow2.svg" alt=""></button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Równa się
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Pusty
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie pusty
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input
+                                    class="drop-input dropdown-item text-black bg-white rounded-3 fs-5 border border-primary py-4 px-4"
+                                    type="text" placeholder="Wpisz wartość">
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--green text-white rounded-3 fs-5">
+                                    <img src="./dist/img/accept.svg" alt="">
+                                    Dodaj warunek
+                                </button>
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--red text-white rounded-3 fs-5">
+                                    <img src="./dist/img/cancel.svg" alt="">
+                                    Usuń warunek
+                                </button>
+                            </li>
                         </ul>
                     </div>
                     <div class="dropdown">
@@ -224,13 +484,81 @@
                             class="col-btn d-flex justify-content-between align-items-center btn border border-1 text-danger fs-5  border-danger dropdown-toggle"
                             style="background-color: #FEE2E2;" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span class="me-5">Ścieżka</span>
+                            <span class="me-5">Kolumna</span>
                             <img src="./dist/img/btn-arrow.svg" alt="">
                         </button>
-                        <ul class="dropdown-menu w-100 fs-5">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu fs-5 border-0 ">
+                            <li class="dropdown-submenu">
+                                <button
+                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    Zaczyna się od
+                                    <img src="./dist/img/btn-arrow2.svg" alt=""></button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Równa się
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Pusty
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie pusty
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input
+                                    class="drop-input dropdown-item text-black bg-white rounded-3 fs-5 border border-primary py-4 px-4"
+                                    type="text" placeholder="Wpisz wartość">
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--green text-white rounded-3 fs-5">
+                                    <img src="./dist/img/accept.svg" alt="">
+                                    Dodaj warunek
+                                </button>
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--red text-white rounded-3 fs-5">
+                                    <img src="./dist/img/cancel.svg" alt="">
+                                    Usuń warunek
+                                </button>
+                            </li>
                         </ul>
                     </div>
                     <div class="dropdown">
@@ -238,13 +566,81 @@
                             class="col-btn d-flex justify-content-between align-items-center btn border border-1 text-danger fs-5  border-danger dropdown-toggle"
                             style="background-color: #FEE2E2;" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span class="me-5">Ścieżka</span>
+                            <span class="me-5">Kolumna</span>
                             <img src="./dist/img/btn-arrow.svg" alt="">
                         </button>
-                        <ul class="dropdown-menu w-100 fs-5">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu fs-5 border-0 ">
+                            <li class="dropdown-submenu">
+                                <button
+                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    Zaczyna się od
+                                    <img src="./dist/img/btn-arrow2.svg" alt=""></button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Równa się
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Pusty
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie pusty
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input
+                                    class="drop-input dropdown-item text-black bg-white rounded-3 fs-5 border border-primary py-4 px-4"
+                                    type="text" placeholder="Wpisz wartość">
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--green text-white rounded-3 fs-5">
+                                    <img src="./dist/img/accept.svg" alt="">
+                                    Dodaj warunek
+                                </button>
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--red text-white rounded-3 fs-5">
+                                    <img src="./dist/img/cancel.svg" alt="">
+                                    Usuń warunek
+                                </button>
+                            </li>
                         </ul>
                     </div>
                     <div class="dropdown">
@@ -252,13 +648,81 @@
                             class="col-btn d-flex justify-content-between align-items-center btn border border-1 text-danger fs-5  border-danger dropdown-toggle"
                             style="background-color: #FEE2E2;" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span class="me-5">Ścieżka</span>
+                            <span class="me-5">Kolumna</span>
                             <img src="./dist/img/btn-arrow.svg" alt="">
                         </button>
-                        <ul class="dropdown-menu w-100 fs-5">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu fs-5 border-0 ">
+                            <li class="dropdown-submenu">
+                                <button
+                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    Zaczyna się od
+                                    <img src="./dist/img/btn-arrow2.svg" alt=""></button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Równa się
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Pusty
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie pusty
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input
+                                    class="drop-input dropdown-item text-black bg-white rounded-3 fs-5 border border-primary py-4 px-4"
+                                    type="text" placeholder="Wpisz wartość">
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--green text-white rounded-3 fs-5">
+                                    <img src="./dist/img/accept.svg" alt="">
+                                    Dodaj warunek
+                                </button>
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--red text-white rounded-3 fs-5">
+                                    <img src="./dist/img/cancel.svg" alt="">
+                                    Usuń warunek
+                                </button>
+                            </li>
                         </ul>
                     </div>
                     <div class="dropdown">
@@ -266,13 +730,81 @@
                             class="col-btn d-flex justify-content-between align-items-center btn border border-1 text-danger fs-5  border-danger dropdown-toggle"
                             style="background-color: #FEE2E2;" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <span class="me-5">Ścieżka</span>
+                            <span class="me-5">Kolumna</span>
                             <img src="./dist/img/btn-arrow.svg" alt="">
                         </button>
-                        <ul class="dropdown-menu w-100 fs-5">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu fs-5 border-0 ">
+                            <li class="dropdown-submenu">
+                                <button
+                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    Zaczyna się od
+                                    <img src="./dist/img/btn-arrow2.svg" alt=""></button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zaczyna się od
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Równa się
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie zawiera
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie kończy się na
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Pusty
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                            Nie pusty
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input
+                                    class="drop-input dropdown-item text-black bg-white rounded-3 fs-5 border border-primary py-4 px-4"
+                                    type="text" placeholder="Wpisz wartość">
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--green text-white rounded-3 fs-5">
+                                    <img src="./dist/img/accept.svg" alt="">
+                                    Dodaj warunek
+                                </button>
+                            </li>
+                            <li>
+                                <button class=" py-4 px-4 drop-btn--red text-white rounded-3 fs-5">
+                                    <img src="./dist/img/cancel.svg" alt="">
+                                    Usuń warunek
+                                </button>
+                            </li>
                         </ul>
                     </div>
                     <button type="button" class="btn col-btn suc text-white fs-5">Dodaj Warunek</button>
@@ -320,6 +852,7 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     <tr class="text-center">
                         <td class="text-center"><input type="checkbox" onclick="toggleRow(this.closest('tr'))"></td>
                         <td>PATH/path/path</td>
@@ -344,6 +877,7 @@
                         <td>Szczegóły...</td>
                         <td>Szczegóły...</td>
                     </tr>
+
                     <tr class="text-center">
                         <td class="text-center"><input type="checkbox" checked onclick="toggleRow(this.closest('tr'))">
                         </td>
@@ -466,6 +1000,37 @@
                 }
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle submenu dropdowns
+            var dropdownSubmenus = document.querySelectorAll('.dropdown-submenu .dropdown-toggle');
+            dropdownSubmenus.forEach(function (submenuToggle) {
+                submenuToggle.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    e.preventDefault();
+
+                    var submenu = this.nextElementSibling;
+                    if (submenu.classList.contains('show')) {
+                        submenu.classList.remove('show');
+                    } else {
+                        // Close all open submenus
+                        var openSubmenus = document.querySelectorAll('.dropdown-submenu .dropdown-menu.show');
+                        openSubmenus.forEach(function (openSubmenu) {
+                            openSubmenu.classList.remove('show');
+                        });
+                        submenu.classList.add('show');
+                    }
+                });
+            });
+
+            // Close submenus when clicking outside
+            document.addEventListener('click', function () {
+                var openSubmenus = document.querySelectorAll('.dropdown-submenu .dropdown-menu.show');
+                openSubmenus.forEach(function (openSubmenu) {
+                    openSubmenu.classList.remove('show');
+                });
+            });
+        });
     </script>
 </body>
 

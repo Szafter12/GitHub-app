@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="./dist/css/style.min.css">
+
+    <title>Screen4</title>
+</head>
+
+<body>
+    <nav class="nav-left d-flex justify-content-start flex-column gap-1 rounded-3 bg-primary">
+    <img class="panel-waves" src="./dist/img/panel-waves.svg" alt="">
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="switch-btn"><img src="./dist/img/arrow.svg" alt=""></button>
+        <p class="btn-name mb-0">Zwiń</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon1.svg" alt=""></button>
+        <p class="btn-name mb-0">Wirtualna maszyna</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon2.svg" alt=""></button>
+        <p class="btn-name mb-0">IBM Blokowe Systemy Pamięci
+            Masowej
+        </p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon3.svg" alt=""></button>
+        <p class="btn-name mb-0">Opcja #1</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon4.svg" alt=""></button>
+        <p class="btn-name mb-0">Data centers</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon5.svg" alt=""></button>
+        <p class="btn-name mb-0">VC Voluminy</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon6.svg" alt=""></button>
+        <p class="btn-name mb-0">VC Datastores</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon7.svg" alt=""></button>
+        <p class="btn-name mb-0">VC Snapshots</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon8.svg" alt=""></button>
+        <p class="btn-name mb-0">Opcja #3</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon9.svg" alt=""></button>
+        <p class="btn-name mb-0">Opcja #3</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn">
+            <img src="./dist/img/icon10.svg" alt="">
+        </button>
+        <p class="btn-name mb-0">Programy narzędziowe</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon11.svg" alt=""></button>
+        <p class="btn-name mb-0">Backups</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon12.svg" alt=""></button>
+        <p class="btn-name mb-0">DataHub Agent Logi</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link">
+        <button class="functional-btn"><img src="./dist/img/icon13.svg" alt=""></button>
+        <p class="btn-name mb-0">DataHub Agent Logi ( via API )</p>
+    </a>
+    <a href="#" class="menu-btn functional-btn functional-btn-link mt-auto">
+        <button class="logOut-btn"><img src="./dist/img/log_out.svg" alt=""></button>
+        <p class="btn-name mb-0">Wyloguj się</p>
+    </a>
+</nav>
+    <header class="nav-top px-5 d-flex align-items-center justify-content-between rounded-3 bg-primary">
+    <div class="nav-top__left d-flex align-items-center gap-4">
+        <img class="nav-top__logo" src="./dist/img/fnk_it.svg" alt="">
+        <span class="text-white">DataHub Manager</span>
+        <span class="d-flex">
+            <input class="form-control text-white rounded-3 fs-4" type="text"
+                placeholder="Zacznij pisać interesującą cię frazę wyszukiwania..." aria-label="Search">
+            <button class="nav-top__search"><img src="./dist/img/search-btn.svg" alt=""></button>
+        </span>
+    </div>
+    <div class="nav-top__right">
+        <button class="notification">
+            <img class="p-2" src="./dist/img/bell.svg" alt="">
+            <div class="notification__number border border-3 border-primary">
+                <span class="bold text-primary">2</span>
+            </div>
+        </button>
+        <button><img class="p-2" src="./dist/img/pen.svg" alt=""></button>
+        <button><img class="p-2" src="./dist/img/settings.svg" alt=""></button>
+        <button><img class="p-2 " src="./dist/img/profil_pic.png" alt=""></button>
+    </div>
+</header>
+    <main>
+        <div class="main-section">
+            <h1 class="mb-5">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-flex align-items-center">
+                        <li class="breadcrumb-item"> <img src="./dist/img/pc.svg" alt=""> Wirtualna maszyna</li>
+                        <li class="breadcrumb-item" aria-current="page">VC Foldery
+                            <span class="bg-warning-subtle py-1 px-3 rounded-3" style="color: #F59E0B;">:hostname</span>
+                        </li>
+                    </ol>
+                </nav>
+            </h1>
+            <div class="d-flex gap-5 flex-nowrap w-100">
+                <form class="row w-100 g-4">
+                    <div class="col-12 searchBox">
+                        <input type="text" class="form-control searchBox-input py-4 ps-4 fs-4"
+                            placeholder="Wpisz nazwę którą chcesz wyszukać/dekodować">
+                        <button><img src="./dist/img/searchBox.svg" alt=""></button>
+                    </div>
+                    <div class="col-12 searchBox">
+                        <p class="text-center text-danger bg-danger-subtle py-4 px-4 rounded-3">Nazwa: <span
+                                class="bold">(nazwa)</span> jest już zajęta</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Nazwa</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="pool_name">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Projekt</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="wartość">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="col-3">
+                            <label for="status" class="form-label"><span class="text-danger">*</span>Środowisko</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Wartośc">
+                        </div>
+                        <div class="col-3">
+                            <label for="status" class="form-label"><span class="text-danger">*</span>Strefa</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Wartośc">
+                        </div>
+                        <div class="col-3">
+                            <label for="status" class="form-label"><span class="text-danger">*</span>Rola</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Wartośc">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Klaster</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="wartosc">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Opis</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Opis usługi">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Klaster</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Wartośc">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Opis</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Opis usługi">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Port</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Nr portu">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Pool</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Pula">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <button class="w-100 mt-3 py-4 px-4 rounded-3 text-white border-0"
+                                style="background-color: #569090;">Zapisz</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="d-flex flex-column align-items-start w-auto gap-5">
+                    <div class="px-5 py-3 bg-light-yellow rounded-4">
+                        <div class="card-body w-100" style="color: #F59E0B;">
+                            <h3 class="bold mt-2">
+                                Kolejność znaków w nazwie określa:
+                            </h3>
+                            <ul class="list-unstyled">
+                                <li class="custom-list-item my-5">
+                                    [1] projekt
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [2] środowisko
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [3] strefa
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [4] rola
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [5.6] klaster
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [7] separator ("-")
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [8.9] usługa
+                                </li>
+                            </ul>
+                            <h3 class="bold mt-2">
+                                Przykład: aplaao-ra
+                            </h3>
+                            <ul class="list-unstyled">
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[1]</span> plaao-ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[2]a</span> laao-ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[3]ap</span> aao-ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[4]api</span> ao-ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[5.6]apla</span> -ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[7]aplaao</span> ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[8.9]aplaao-</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="./dist/js/main.min.js"></script>
+</body>
+
+</html>

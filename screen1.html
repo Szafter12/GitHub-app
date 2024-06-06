@@ -105,16 +105,16 @@
     </div>
 </header>
     <main>
-        <div class="container main-section">
+        <div class="main-section">
             <h1 class="mb-5">
                 <img src="./dist/img/pc.svg" alt=""> Wirtualna maszyna <span
                     class="bg-primary-subtle py-1 px-3 rounded-3">:hostname</span>
             </h1>
-            <div class="d-flex justify-content-between gap-5 flex-nowrap w-100">
-                <div class="card card-custom full-row-card w-75">
+            <div class="d-flex gap-5 flex-nowrap w-100">
+                <div class="card card-custom full-row-card w-100">
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-6">
+                        <div class="d-flex">
+                            <div class="col-6">
                                 <p class="section-title">Nazwa hosta</p>
                                 <p><span class="status-dot"></span> Hostname</p>
                                 <p class="section-title">VM patch</p>
@@ -134,7 +134,7 @@
                                 <p class="section-title">Środowisko</p>
                                 <p><span class="status-dot"></span> Nazwa</p>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-6">
                                 <p class="section-title">Status</p>
                                 <p>TAK</p>
                                 <p class="section-title">VC ESX</p>
@@ -171,20 +171,23 @@
                             <ul class="list-unstyled">
                                 <li class="custom-list-item my-5">
                                     <div>
-                                        <input class="form-check-input me-4 bg-warning border border-0" type="checkbox" id="checkboxNoLabel" value="" aria-label="checkbox" >
-                                      </div>
+                                        <input class="form-check-input me-4 bg-warning border border-0" type="checkbox"
+                                            id="checkboxNoLabel" value="" aria-label="checkbox">
+                                    </div>
                                     py00 (Inicjator procesu DIM Agenta)
                                 </li>
                                 <li class="custom-list-item my-5">
                                     <div>
-                                        <input class="form-check-input me-4 bg-warning border border-0" type="checkbox" id="checkboxNoLabel" value="" aria-label="checkbox" >
-                                      </div>
+                                        <input class="form-check-input me-4 bg-warning border border-0" type="checkbox"
+                                            id="checkboxNoLabel" value="" aria-label="checkbox">
+                                    </div>
                                     py01 (Worker skanujący certyfikaty)
                                 </li>
                                 <li class="custom-list-item my-5">
                                     <div>
-                                        <input class="form-check-input me-4 bg-warning border border-0" type="checkbox" id="checkboxNoLabel" value="" aria-label="checkbox" >
-                                      </div>
+                                        <input class="form-check-input me-4 bg-warning border border-0" type="checkbox"
+                                            id="checkboxNoLabel" value="" aria-label="checkbox">
+                                    </div>
                                     py11 (Worker skanujący narzędzia
                                     systemowe)
                                 </li>
