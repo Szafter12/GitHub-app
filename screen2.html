@@ -830,142 +830,270 @@
                 <button class="panel-ico p-3 btn border border-1"><img src="./dist/img/panel-ico7.svg" alt=""></button>
                 <button class="panel-ico p-3 btn border border-1"><img src="./dist/img/panel-ico8.svg" alt=""></button>
             </div>
-            <table class="table panel table-hover mt-5">
-                <thead class="mb-5">
-                    <tr class="text-center">
-                        <th class="text-center"><input type="checkbox"></th>
-                        <th>Ścieżka</th>
-                        <th>Klaster via Folder</th>
-                        <th>Nazwa ośrodka</th>
-                        <th>Nazwa ośrodka</th>
-                        <th>Nazwa ośrodka</th>
-                        <th class="text-center"></th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <tr class="text-center">
-                        <td class="text-center"><input type="checkbox" onclick="toggleRow(this.closest('tr'))"></td>
-                        <td>PATH/path/path</td>
-                        <td>Nazwa klastra</td>
-                        <td>/Datacenters/path/path</td>
-                        <td>/Datacenters/path/path</td>
-                        <td>/Datacenters/path/path</td>
-                        <td class="text-center"><span class="expand-collapse" onclick="toggleExpandCollapse(this)">
-                                <img src="./dist/img/panel-arrow.svg" alt=""></span>
-                        </td>
-                    </tr>
-                    <tr class="details-row text-center" style="display: none;">
-                        <td></td>
-                        <td>Szczegóły...</td>
-                        <td>Szczegóły...</td>
-                        <td>
-                            <div class="status">
-                                <span class="green"> :hostname</span>
-                                <span class="green"> :hostname</span>
-                            </div>
-                        </td>
-                        <td>Szczegóły...</td>
-                        <td>Szczegóły...</td>
-                    </tr>
-
-                    <tr class="text-center">
-                        <td class="text-center"><input type="checkbox" checked onclick="toggleRow(this.closest('tr'))">
-                        </td>
-                        <td>PATH/path/path</td>
-                        <td>Nazwa klastra</td>
-                        <td>/Datacenters/path/path</td>
-                        <td>/Datacenters/path/path</td>
-                        <td>/Datacenters/path/path</td>
-                        <td class="text-center"><span class="expand-collapse" onclick="toggleExpandCollapse(this)"> <img
-                                    src="./dist/img/panel-arrow.svg" alt=""></span></td>
-                    </tr>
-                    <tr class="details-row text-center" style="display: none;">
-                        <td></td>
-                        <td>Szczegóły...</td>
-                        <td>Szczegóły...</td>
-                        <td>Szczegóły...</td>
-                        <td>Szczegóły...</td>
-                        <td>
-                            <div class="status">
-                                <span class="orange"> :hostname</span>
-                                <span class="green"> :hostname</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="text-center">
-                        <td class="text-center"><input type="checkbox" onclick="toggleRow(this.closest('tr'))"></td>
-                        <td>PATH/path/path</td>
-                        <td>Nazwa klastra</td>
-                        <td>/Datacenters/path/path</td>
-                        <td>/Datacenters/path/path</td>
-                        <td>/Datacenters/path/path</td>
-                        <td class="text-center"><span class="expand-collapse" onclick="toggleExpandCollapse(this)"> <img
-                                    src="./dist/img/panel-arrow.svg" alt=""></span></td>
-                    </tr>
-                    <tr class="details-row text-center" style="display: none;">
-                        <td></td>
-                        <td>Szczegóły...</td>
-                        <td>Szczegóły...</td>
-                        <td>
-                            <div class="status">
-                                <span class="green"> :hostname</span>
-                                <span class="green"> :hostname</span>
-                            </div>
-                        </td>
-                        <td>Szczegóły...</td>
-                        <td>Szczegóły...</td>
-                    </tr>
-                    <tr class="text-center">
-                        <td class="text-center"><input type="checkbox" onclick="toggleRow(this.closest('tr'))"></td>
-                        <td>PATH/path/path</td>
-                        <td>Nazwa klastra</td>
-                        <td>/Datacenters/path/path</td>
-                        <td>/Datacenters/path/path</td>
-                        <td>/Datacenters/path/path</td>
-                        <td class="text-center"><span class="expand-collapse" onclick="toggleExpandCollapse(this)"> <img
-                                    src="./dist/img/panel-arrow.svg" alt=""></span></td>
-                    </tr>
-                    <tr class="details-row text-center" style="display: none;">
-                        <td></td>
-                        <td>Szczegóły...</td>
-                        <td>Szczegóły...</td>
-                        <td>Szczegóły...</td>
-                        <td>
-                            <div class="status">
-                                <span class="green"> :hostname</span>
-                                <span class="orange"> :hostname</span>
-                            </div>
-                        </td>
-                        <td>Szczegóły...</td>
-                    </tr>
-                    <tr class="text-center">
-                        <td class="text-center"><input type="checkbox" checked onclick="toggleRow(this.closest('tr'))">
-                        </td>
-                        <td>PATH/path/path</td>
-                        <td>Nazwa klastra</td>
-                        <td>/Datacenters/path/path</td>
-                        <td>/Datacenters/path/path</td>
-                        <td>/Datacenters/path/path</td>
-                        <td class="text-center"><span class="expand-collapse" onclick="toggleExpandCollapse(this)"> <img
-                                    src="./dist/img/panel-arrow.svg" alt=""></span></td>
-                    </tr>
-                    <tr class="details-row text-center" style="display: table-row;">
-                        <td></td>
-                        <td>Szczegóły...</td>
-                        <td>Szczegóły...</td>
-                        <td>Szczegóły...</td>
-                        <td>
-                            <div class="status">
-                                <span class="orange"> :hostname</span>
-                                <span class="green"> :hostname</span>
-                            </div>
-                        </td>
-                        <td>Szczegóły...</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="d-flex justify-content-between align-items-center panel my-5 py-4 px-4 text-center">
+                <div class="checkbox-container" data-index="all">
+                    <label>
+                        <input id="changeAllCheckbox" type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <span class="d-flex gap-3">Ścieżka <img src="./dist/img/table-ar.svg" alt=""></span>
+                <span class="d-flex gap-3">Klaster via Folder <img src="./dist/img/table-ar.svg" alt=""></span>
+                <span class="d-flex gap-3">Nazwa ośrodka <img src="./dist/img/table-ar.svg" alt=""></span>
+                <span class="d-flex gap-3">Nazwa ośrodka <img src="./dist/img/table-ar.svg" alt=""></span>
+                <span class="d-flex gap-3 me-5">Nazwa ośrodka <img src="./dist/img/table-ar.svg" alt=""></span>
+                <span></span>
+            </div>
+            <div class="panelTable d-flex flex-column justify-content-center rounded-3 mb-4 w-100" data-index="1">
+                <div class=" text-center py-4 px-4 d-flex align-items-center justify-content-between">
+                    <div class="checkbox-container" data-index="1">
+                        <label class="custom-checkbox">
+                            <input class="checkbox" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <spam>PATH/path/path</spam>
+                    <spam>Nazwa klastra</spam>
+                    <span>/Datacenters/path/path</span>
+                    <span>/Datacenters/path/path</span>
+                    <span>/Datacenters/path/path</span>
+                    <span class="text-center">
+                        <span class="expand-collapse" onclick="toggleExpandCollapse(this)">
+                            <img src="./dist/img/panel-arrow.svg" alt="">
+                        </span>
+                    </span>
+                </div>
+                <div class="details-row justify-content-between p-4 text-center align-items-center"
+                    style="display: none;">
+                    <div class="cell checkbox-cell">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" style="opacity: 0;">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <span>...</span>
+                    <span>...</span>
+                    <span>
+                        <div class="status">
+                            <span class="green"> :hostname</span>
+                            <span class="red"> :hostname</span>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="status">
+                            <span class="orange"> :hostname</span>
+                            <span class="green"> :hostname</span>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="status">
+                            <span class="green"> :hostname</span>
+                            <span class="green"> :hostname</span>
+                        </div>
+                    </span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="panelTable d-flex flex-column justify-content-center rounded-3 mb-4 w-100" data-index="2">
+                <div class=" text-center py-4 px-4 d-flex align-items-center justify-content-between">
+                    <div class="checkbox-container" data-index="2">
+                        <label class="custom-checkbox">
+                            <input class="checkbox" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <spam>PATH/path/path</spam>
+                    <spam>Nazwa klastra</spam>
+                    <span>/Datacenters/path/path</span>
+                    <span>/Datacenters/path/path</span>
+                    <span>/Datacenters/path/path</span>
+                    <span class="text-center">
+                        <span class="expand-collapse" onclick="toggleExpandCollapse(this)">
+                            <img src="./dist/img/panel-arrow.svg" alt="">
+                        </span>
+                    </span>
+                </div>
+                <div class="details-row justify-content-between p-4 text-center align-items-center"
+                    style="display: none;">
+                    <div class="cell checkbox-cell">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" style="opacity: 0;">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <span>...</span>
+                    <span>...</span>
+                    <span>
+                        <div class="status">
+                            <span class="green"> :hostname</span>
+                            <span class="red"> :hostname</span>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="status">
+                            <span class="orange"> :hostname</span>
+                            <span class="green"> :hostname</span>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="status">
+                            <span class="green"> :hostname</span>
+                            <span class="green"> :hostname</span>
+                        </div>
+                    </span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="panelTable d-flex flex-column justify-content-center rounded-3 mb-4 w-100" data-index="3">
+                <div class=" text-center py-4 px-4 d-flex align-items-center justify-content-between">
+                    <div class="checkbox-container" data-index="3">
+                        <label class="custom-checkbox">
+                            <input class="checkbox" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <spam>PATH/path/path</spam>
+                    <spam>Nazwa klastra</spam>
+                    <span>/Datacenters/path/path</span>
+                    <span>/Datacenters/path/path</span>
+                    <span>/Datacenters/path/path</span>
+                    <span class="text-center">
+                        <span class="expand-collapse" onclick="toggleExpandCollapse(this)">
+                            <img src="./dist/img/panel-arrow.svg" alt="">
+                        </span>
+                    </span>
+                </div>
+                <div class="details-row justify-content-between p-4 text-center align-items-center"
+                    style="display: none;">
+                    <div class="cell checkbox-cell">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" style="opacity: 0;">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <span>...</span>
+                    <span>...</span>
+                    <span>
+                        <div class="status">
+                            <span class="green"> :hostname</span>
+                            <span class="red"> :hostname</span>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="status">
+                            <span class="orange"> :hostname</span>
+                            <span class="green"> :hostname</span>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="status">
+                            <span class="green"> :hostname</span>
+                            <span class="green"> :hostname</span>
+                        </div>
+                    </span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="panelTable d-flex flex-column justify-content-center rounded-3 mb-4 w-100" data-index="4">
+                <div class=" text-center py-4 px-4 d-flex align-items-center justify-content-between">
+                    <div class="checkbox-container" data-index="4">
+                        <label class="custom-checkbox">
+                            <input class="checkbox" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <spam>PATH/path/path</spam>
+                    <spam>Nazwa klastra</spam>
+                    <span>/Datacenters/path/path</span>
+                    <span>/Datacenters/path/path</span>
+                    <span>/Datacenters/path/path</span>
+                    <span class="text-center">
+                        <span class="expand-collapse" onclick="toggleExpandCollapse(this)">
+                            <img src="./dist/img/panel-arrow.svg" alt="">
+                        </span>
+                    </span>
+                </div>
+                <div class="details-row justify-content-between p-4 text-center align-items-center"
+                    style="display: none;">
+                    <div class="cell checkbox-cell">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" style="opacity: 0;">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <span>...</span>
+                    <span>...</span>
+                    <span>
+                        <div class="status">
+                            <span class="green"> :hostname</span>
+                            <span class="red"> :hostname</span>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="status">
+                            <span class="orange"> :hostname</span>
+                            <span class="green"> :hostname</span>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="status">
+                            <span class="green"> :hostname</span>
+                            <span class="green"> :hostname</span>
+                        </div>
+                    </span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="panelTable d-flex flex-column justify-content-center rounded-3 mb-4 w-100" data-index="5">
+                <div class=" text-center py-4 px-4 d-flex align-items-center justify-content-between">
+                    <div class="checkbox-container" data-index="5">
+                        <label class="custom-checkbox">
+                            <input class="checkbox" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <spam>PATH/path/path</spam>
+                    <spam>Nazwa klastra</spam>
+                    <span>/Datacenters/path/path</span>
+                    <span>/Datacenters/path/path</span>
+                    <span>/Datacenters/path/path</span>
+                    <span class="text-center">
+                        <span class="expand-collapse" onclick="toggleExpandCollapse(this)">
+                            <img src="./dist/img/panel-arrow.svg" alt="">
+                        </span>
+                    </span>
+                </div>
+                <div class="details-row justify-content-between p-4 text-center align-items-center"
+                    style="display: none;">
+                    <div class="checkbox-cell">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" style="opacity: 0;">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <span>...</span>
+                    <span>...</span>
+                    <span>
+                        <div class="status">
+                            <span class="green"> :hostname</span>
+                            <span class="red"> :hostname</span>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="status">
+                            <span class="orange"> :hostname</span>
+                            <span class="green"> :hostname</span>
+                        </div>
+                    </span>
+                    <span>
+                        <div class="status">
+                            <span class="green"> :hostname</span>
+                            <span class="green"> :hostname</span>
+                        </div>
+                    </span>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -975,15 +1103,13 @@
     crossorigin="anonymous"></script>
 <script src="./dist/js/main.min.js"></script>
     <script>
-        function toggleRow(row) {
-            row.classList.toggle('selected');
-        }
+
         function toggleExpandCollapse(button) {
             const row = button.parentNode.parentNode;
             const nextRow = row.nextElementSibling;
             if (nextRow && nextRow.classList.contains('details-row')) {
                 if (nextRow.style.display === 'none') {
-                    nextRow.style.display = 'table-row';
+                    nextRow.style.display = 'flex';
                     button.innerHTML = ' <img src="./dist/img/panel-arrow-reverse.svg" alt="">';
                 } else {
                     nextRow.style.display = 'none';
@@ -992,8 +1118,48 @@
             }
         }
 
+        const checkbox = document.querySelectorAll(".checkbox");
+        const allCheckbox = document.getElementById("changeAllCheckbox");
+        const divs = document.querySelectorAll(".panelTable");
+
+        checkbox.forEach(box => {
+            box.addEventListener("change", function () {
+                const container = box.closest('.checkbox-container');
+                const index = container.getAttribute('data-index');
+                const div = document.querySelector(`.panelTable[data-index='${index}']`);
+
+                if (box.checked) {
+                    div.style.backgroundColor = "#EFF6FF";
+                    div.style.borderColor = "#3B82F6";
+                } else {
+                    div.style.backgroundColor = "#fff";
+                    div.style.borderColor = "#d1d5db";
+                }
+            });
+        });
+
+        allCheckbox.addEventListener("change", function () {
+            if (allCheckbox.checked) {
+                divs.forEach(div => {
+                    div.style.backgroundColor = "#EFF6FF";
+                    div.style.borderColor = "#3B82F6";
+                })
+                checkbox.forEach(box => {
+                    box.checked = true
+                })
+            } else {
+                divs.forEach(div => {
+                    div.style.backgroundColor = "#fff";
+                    div.style.borderColor = "#d1d5db";
+                })
+                checkbox.forEach(box => {
+                    box.checked = false
+                })
+            }
+        });
+
+
         document.addEventListener('DOMContentLoaded', function () {
-            // Handle submenu dropdowns
             var dropdownSubmenus = document.querySelectorAll('.dropdown-submenu .dropdown-toggle');
             dropdownSubmenus.forEach(function (submenuToggle) {
                 submenuToggle.addEventListener('click', function (e) {
@@ -1004,7 +1170,6 @@
                     if (submenu.classList.contains('show')) {
                         submenu.classList.remove('show');
                     } else {
-                        // Close all open submenus
                         var openSubmenus = document.querySelectorAll('.dropdown-submenu .dropdown-menu.show');
                         openSubmenus.forEach(function (openSubmenu) {
                             openSubmenu.classList.remove('show');
@@ -1014,7 +1179,10 @@
                 });
             });
 
-            // Close submenus when clicking outside
+            function toggleRow(row) {
+                row.classList.toggle('selected');
+            }
+
             document.addEventListener('click', function () {
                 var openSubmenus = document.querySelectorAll('.dropdown-submenu .dropdown-menu.show');
                 openSubmenus.forEach(function (openSubmenu) {
