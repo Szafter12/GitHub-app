@@ -16,11 +16,6 @@
         /* Stylizacja dla zagnieżdżonych dropdownów */
         .dropdown-submenu {
             position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 3;
         }
 
         .dropdown-submenu>.dropdown-menu {
@@ -34,74 +29,78 @@
             border-top-left-radius: 0;
             border-top-right-radius: 0;
         }
+
+        .dropdown-menu.show {
+            align-items: flex-start;
+        }
     </style>
 </head>
 
 <body>
     <nav class="nav-left d-flex justify-content-start flex-column gap-1 rounded-3 bg-primary">
     <img class="panel-waves" src="./dist/img/panel-waves.svg" alt="">
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="switch-btn"><img src="./dist/img/arrow.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link switch-btn">
+        <button><img class="arrow" src="./dist/img/arrow.svg" alt=""></button>
         <p class="btn-name mb-0">Zwiń</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon1.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon1.svg" alt=""></button>
         <p class="btn-name mb-0">Wirtualna maszyna</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon2.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon2.svg" alt=""></button>
         <p class="btn-name mb-0">IBM Blokowe Systemy Pamięci
             Masowej
         </p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon3.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon3.svg" alt=""></button>
         <p class="btn-name mb-0">Opcja #1</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon4.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon4.svg" alt=""></button>
         <p class="btn-name mb-0">Data centers</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon5.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon5.svg" alt=""></button>
         <p class="btn-name mb-0">VC Voluminy</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon6.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon6.svg" alt=""></button>
         <p class="btn-name mb-0">VC Datastores</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon7.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon7.svg" alt=""></button>
         <p class="btn-name mb-0">VC Snapshots</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon8.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon8.svg" alt=""></button>
         <p class="btn-name mb-0">Opcja #3</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon9.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon9.svg" alt=""></button>
         <p class="btn-name mb-0">Opcja #3</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn">
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button>
             <img src="./dist/img/icon10.svg" alt="">
         </button>
         <p class="btn-name mb-0">Programy narzędziowe</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon11.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon11.svg" alt=""></button>
         <p class="btn-name mb-0">Backups</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon12.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon12.svg" alt=""></button>
         <p class="btn-name mb-0">DataHub Agent Logi</p>
     </a>
-    <a href="#" class="menu-btn functional-btn functional-btn-link">
-        <button class="functional-btn"><img src="./dist/img/icon13.svg" alt=""></button>
+    <a href="#" class="menu-btn functional-btn functional-btn-link" onclick="setActive(this)">
+        <button><img src="./dist/img/icon13.svg" alt=""></button>
         <p class="btn-name mb-0">DataHub Agent Logi ( via API )</p>
     </a>
     <a href="#" class="menu-btn functional-btn functional-btn-link mt-auto">
-        <button class="logOut-btn"><img src="./dist/img/log_out.svg" alt=""></button>
+        <button><img src="./dist/img/log_out.svg" alt=""></button>
         <p class="btn-name mb-0">Wyloguj się</p>
     </a>
 </nav>
@@ -162,53 +161,53 @@
                         <ul class="dropdown-menu fs-5 border-0 ">
                             <li class="dropdown-submenu">
                                 <button
-                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    class="dropdown-item d-flex align-items-center justify-content-between dropdown-toggle col-btn3 py-4 px-4">
                                     Zaczyna się od
                                     <img src="./dist/img/btn-arrow2.svg" alt=""></button>
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5 w-100">
                                             Zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Równa się
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Pusty
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie pusty
                                         </button>
                                     </li>
@@ -244,53 +243,53 @@
                         <ul class="dropdown-menu fs-5 border-0 ">
                             <li class="dropdown-submenu">
                                 <button
-                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    class="dropdown-item d-flex align-items-center justify-content-between dropdown-toggle col-btn3 py-4 px-4">
                                     Zaczyna się od
                                     <img src="./dist/img/btn-arrow2.svg" alt=""></button>
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5 w-100">
                                             Zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Równa się
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Pusty
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie pusty
                                         </button>
                                     </li>
@@ -326,53 +325,53 @@
                         <ul class="dropdown-menu fs-5 border-0 ">
                             <li class="dropdown-submenu">
                                 <button
-                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    class="dropdown-item d-flex align-items-center justify-content-between dropdown-toggle col-btn3 py-4 px-4">
                                     Zaczyna się od
                                     <img src="./dist/img/btn-arrow2.svg" alt=""></button>
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5 w-100">
                                             Zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Równa się
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Pusty
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie pusty
                                         </button>
                                     </li>
@@ -408,53 +407,53 @@
                         <ul class="dropdown-menu fs-5 border-0 ">
                             <li class="dropdown-submenu">
                                 <button
-                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    class="dropdown-item d-flex align-items-center justify-content-between dropdown-toggle col-btn3 py-4 px-4">
                                     Zaczyna się od
                                     <img src="./dist/img/btn-arrow2.svg" alt=""></button>
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5 w-100">
                                             Zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Równa się
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Pusty
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie pusty
                                         </button>
                                     </li>
@@ -490,53 +489,53 @@
                         <ul class="dropdown-menu fs-5 border-0 ">
                             <li class="dropdown-submenu">
                                 <button
-                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    class="dropdown-item d-flex align-items-center justify-content-between dropdown-toggle col-btn3 py-4 px-4">
                                     Zaczyna się od
                                     <img src="./dist/img/btn-arrow2.svg" alt=""></button>
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5 w-100">
                                             Zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Równa się
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Pusty
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie pusty
                                         </button>
                                     </li>
@@ -572,53 +571,53 @@
                         <ul class="dropdown-menu fs-5 border-0 ">
                             <li class="dropdown-submenu">
                                 <button
-                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    class="dropdown-item d-flex align-items-center justify-content-between dropdown-toggle col-btn3 py-4 px-4">
                                     Zaczyna się od
                                     <img src="./dist/img/btn-arrow2.svg" alt=""></button>
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5 w-100">
                                             Zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Równa się
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Pusty
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie pusty
                                         </button>
                                     </li>
@@ -654,53 +653,53 @@
                         <ul class="dropdown-menu fs-5 border-0 ">
                             <li class="dropdown-submenu">
                                 <button
-                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    class="dropdown-item d-flex align-items-center justify-content-between dropdown-toggle col-btn3 py-4 px-4">
                                     Zaczyna się od
                                     <img src="./dist/img/btn-arrow2.svg" alt=""></button>
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5 w-100">
                                             Zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Równa się
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Pusty
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie pusty
                                         </button>
                                     </li>
@@ -736,53 +735,53 @@
                         <ul class="dropdown-menu fs-5 border-0 ">
                             <li class="dropdown-submenu">
                                 <button
-                                    class="dropdown-item d-flex align-items-center justify-content-evenly dropdown-toggle col-btn3 py-4 px-4">
+                                    class="dropdown-item d-flex align-items-center justify-content-between dropdown-toggle col-btn3 py-4 px-4">
                                     Zaczyna się od
                                     <img src="./dist/img/btn-arrow2.svg" alt=""></button>
 
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5 w-100">
                                             Zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zaczyna się od
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Równa się
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie zawiera
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie kończy się na
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Pusty
                                         </button>
                                     </li>
                                     <li>
-                                        <button class="dropdown-item py-2 px-5 fs-5">
+                                        <button class="dropdown-item py-3 px-4 fs-5">
                                             Nie pusty
                                         </button>
                                     </li>
@@ -810,34 +809,26 @@
                     <button type="button" class="btn col-btn suc text-white fs-5">Dodaj Warunek</button>
                 </div>
             </div>
-            <div class="d-flex gap-2 mt-5 align-items-center">
-                <div class="dropdown me-3">
-                    <button
-                        class="btn border border-1 col-btn2 fs-5 d-flex align-items-center justify-content-between dropdown-toggle"
-                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span>10</span>
-                        <img src="./dist/img/panel-arrow.svg" alt="">
-                    </button>
-                    <ul class="dropdown-menu w-100 fs-5">
-                        <li><a class="dropdown-item" href="#">1</a></li>
-                        <li><a class="dropdown-item" href="#">2</a></li>
-                        <li><a class="dropdown-item" href="#">3</a></li>
-                        <li><a class="dropdown-item" href="#">4</a></li>
-                        <li><a class="dropdown-item" href="#">5</a></li>
-                        <li><a class="dropdown-item" href="#">6</a></li>
-                        <li><a class="dropdown-item" href="#">7</a></li>
-                        <li><a class="dropdown-item" href="#">8</a></li>
-                        <li><a class="dropdown-item" href="#">9</a></li>
-                        <li><a class="dropdown-item" href="#">10</a></li>
-                    </ul>
-                </div>
-                <button class="panel-ico btn border border-1"><img src="./dist/img/panel-ico1.svg" alt=""></button>
-                <button class="panel-ico btn border border-1"><img src="./dist/img/panel-ico2.svg" alt=""></button>
-                <button class="panel-ico btn border border-1"><img src="./dist/img/panel-ico3.svg" alt=""></button>
-                <button class="panel-ico btn border border-1"><img src="./dist/img/panel-ico4.svg" alt=""></button>
-                <button class="panel-ico btn border border-1"><img src="./dist/img/panel-ico5.svg" alt=""></button>
-                <button class="panel-ico btn border border-1"><img src="./dist/img/panel-ico7.svg" alt=""></button>
-                <button class="panel-ico btn border border-1"><img src="./dist/img/panel-ico8.svg" alt=""></button>
+            <div class="d-flex gap-3 mt-5 align-items-center">
+                <select id="inputState" class="form-select btn-select p-3 fs-4 me-5">
+                    <option selected>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+                <button class="panel-ico btn border border-1 p-3"><img src="./dist/img/panel-ico1.svg" alt=""></button>
+                <button class="panel-ico p-3 btn border border-1"><img src="./dist/img/panel-ico2.svg" alt=""></button>
+                <button class="panel-ico p-3 btn border border-1"><img src="./dist/img/panel-ico3.svg" alt=""></button>
+                <button class="panel-ico p-3 btn border border-1"><img src="./dist/img/panel-ico4.svg" alt=""></button>
+                <button class="panel-ico p-3 btn border border-1"><img src="./dist/img/panel-ico5.svg" alt=""></button>
+                <button class="panel-ico p-3 btn border border-1"><img src="./dist/img/panel-ico7.svg" alt=""></button>
+                <button class="panel-ico p-3 btn border border-1"><img src="./dist/img/panel-ico8.svg" alt=""></button>
             </div>
             <table class="table panel table-hover mt-5">
                 <thead class="mb-5">
