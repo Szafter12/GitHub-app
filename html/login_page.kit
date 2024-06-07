@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <!-- @include head_structure -->
+    <title>Login Page</title>
+</head>
+
+<body>
+    <main class="w-100">
+        <section class="login d-flex">
+            <div class="login__left overflow-hidden d-flex justify-content-center align-items-center">
+                <div class="login__left-content w-75">
+                    <p class="mb-5 text-primary text-nowrap bold fs-1"><img class="login-logo me-3"
+                            src="./dist/img/logo_login.svg" alt=""> DataHub Manager
+                    </p>
+                    <div class="login__info">
+                        <h1 class="bold mb-2">Zaloguj się do swojego konta</h1>
+                        <p class="text-secondary fs-4">Witamy ponownie wpisz dane do logowania</p>
+                    </div>
+                    <img class="login__waves d-none d-lg-block" src="./dist/img/waves.svg" alt="">
+                    <form class="mt-5">
+                        <div class="mb-4 input-div">
+                            <img class="input-icon input-icon--left" src="./dist/img/post-ico.png" alt="">
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                placeholder="Adres E-mail">
+                        </div>
+                        <div class="mb-4 input-div">
+                            <img class="input-icon input-icon--left" src="./dist/img/pass-ico.png" alt="">
+                            <button class="input-icon input-icon--right"><img src="./dist/img/pass-hide.png"
+                                    alt=""></button>
+                            <input type="password" class="form-control" id="password" placeholder="Hasło">
+                        </div>
+                        <div class="login-check d-flex justify-content-between mt-5 mb-5">
+                            <div class=" form-check d-flex align-items-center gap-3">
+                                <input class="input-check" type="checkbox" id="rememberMe">
+                                <label class="customCheckbox" for="rememberMe"></label>
+                                <span class="">Zapamiętaj mnie</span>
+                            </div>
+                            <div>
+                                <a href="#" class="text-primary bold fs-4">Przypomnij hasło</a>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-4 px-3 mt-4 fs-4">Zaloguj się</button>
+                    </form>
+                </div>
+            </div>
+            <div class="login__right bg-primary d-none d-lg-block">
+                <img src="./dist/img/login_right.png" alt="">
+            </div>
+        </section>
+    </main>
+
+
+    <!-- @include body_structure -->
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <!-- @include head_structure -->
+    <title>Screen4</title>
+</head>
+
+<body>
+    <!-- @include nav -->
+    <!-- @include header -->
+    <main>
+        <div class="main-section">
+            <h1 class="mb-5">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-flex align-items-center">
+                        <li class="breadcrumb-item"> <img src="./dist/img/pc.svg" alt=""> Wirtualna maszyna</li>
+                        <li class="breadcrumb-item" aria-current="page">VC Foldery
+                            <span class="py-1 px-3 rounded-3"
+                                style="color: #3B82F6; background-color:#DBEAFE ;">:hostname</span>
+                        </li>
+                    </ol>
+                </nav>
+            </h1>
+            <div class="d-flex gap-5 flex-nowrap w-100">
+                <form class="row w-100 g-4">
+                    <div class="col-12 searchBox">
+                        <input type="text" class="form-control searchBox-input py-4 ps-4 fs-4"
+                            placeholder="Wpisz nazwę którą chcesz wyszukać/dekodować">
+                        <button><img src="./dist/img/searchBox.svg" alt=""></button>
+                    </div>
+                    <div class="col-12 searchBox">
+                        <p class="text-center text-danger bg-danger-subtle py-4 px-4 rounded-3">Nazwa: <span
+                                class="bold">(nazwa)</span> jest już zajęta</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Nazwa</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="pool_name">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Projekt</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="wartość">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="col-3">
+                            <label for="status" class="form-label"><span class="text-danger">*</span>Środowisko</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Wartośc">
+                        </div>
+                        <div class="col-3">
+                            <label for="status" class="form-label"><span class="text-danger">*</span>Strefa</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Wartośc">
+                        </div>
+                        <div class="col-3">
+                            <label for="status" class="form-label"><span class="text-danger">*</span>Rola</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Wartośc">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Klaster</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="wartosc">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Opis</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Opis usługi">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Klaster</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Wartośc">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Opis</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Opis usługi">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Port</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Nr portu">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Pool</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Pula">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <button class="w-100 mt-3 py-4 px-4 rounded-3 text-white border-0"
+                                style="background-color: #569090;">Zapisz</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="d-flex flex-column align-items-start w-auto gap-5">
+                    <div class="px-5 py-3 bg-light-yellow rounded-4">
+                        <div class="card-body w-100" style="color: #F59E0B;">
+                            <h3 class="bold mt-2">
+                                Kolejność znaków w nazwie określa:
+                            </h3>
+                            <ul class="list-unstyled">
+                                <li class="custom-list-item my-5">
+                                    [1] projekt
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [2] środowisko
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [3] strefa
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [4] rola
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [5.6] klaster
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [7] separator ("-")
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    [8.9] usługa
+                                </li>
+                            </ul>
+                            <h3 class="bold mt-2">
+                                Przykład: aplaao-ra
+                            </h3>
+                            <ul class="list-unstyled">
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[1]</span> plaao-ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[2]a</span> laao-ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[3]ap</span> aao-ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[4]api</span> ao-ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[5.6]apla</span> -ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[7]aplaao</span> ra
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <span class="me-5">[8.9]aplaao-</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- @include body_structure -->
+</body>
+
+</html>

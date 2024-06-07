@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <!-- @include head_structure -->
+    <title>Screen1</title>
+</head>
+
+<body>
+    <!-- @include nav -->
+    <!-- @include header -->
+    <main>
+        <div class="main-section">
+            <h1 class="mb-5">
+                <img src="./dist/img/pc.svg" alt=""> Wirtualna maszyna <span class="py-1 px-3 rounded-3"
+                    style="color: #3B82F6; background-color:#DBEAFE ;">:hostname</span>
+            </h1>
+            <div class="d-flex gap-5 flex-nowrap w-100">
+                <div class="card card-custom full-row-card w-100">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="col-6">
+                                <p class="section-title py-4">Nazwa hosta</p>
+                                <p class="ps-4"><span class="status-dot"></span> Hostname</p>
+                                <p class="section-title py-4">VM patch</p>
+                                <p class="ps-4">/path/path</p>
+                                <p class="section-title py-4">Ośrodek</p>
+                                <p class="ps-4">Nazwa ośrodka</p>
+                                <p class="section-title py-4">Key</p>
+                                <p class="ps-4">503d1634-cf8f-29ad-321e-471bd1fa6</p>
+                                <p class="section-title py-4">PowerState</p>
+                                <p class="ps-4">poweredON</p>
+                                <p class="section-title py-4">OS</p>
+                                <p class="ps-4">CentOS 7 (64-bit)</p>
+                                <p class="section-title py-4">Memory size (MB)</p>
+                                <p class="ps-4">16384</p>
+                                <p class="section-title py-4">Guest IP</p>
+                                <p class="ps-4">0.0.0.0</p>
+                                <p class="section-title py-4">Środowisko</p>
+                                <p class="ps-4"><span class="status-dot"></span> Nazwa</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="section-title py-4">Status</p>
+                                <p class="ps-4">TAK</p>
+                                <p class="section-title py-4">VC ESX</p>
+                                <p class="ps-4">ESX Server Name</p>
+                                <p class="section-title py-4">VC Klaster</p>
+                                <p class="ps-4">Nazwa klastra</p>
+                                <p class="section-title py-4">Uuid</p>
+                                <p class="ps-4">423d9eb0-a6b7-060c-53b6-f67debe7</p>
+                                <p class="section-title py-4">Overall status</p>
+                                <p class="ps-4">green</p>
+                                <p class="section-title py-4">Kernel</p>
+                                <p class="ps-4">bitness='64' distroName='CentOS Linux' distroVersion='7'
+                                    familyName='Linux'
+                                    kernelVersion='3.10.0-1160.42.2.el7.x86_64' prettyName='CentOS Linus 7 (core)'</p>
+                                <p class="section-title py-4">Num CPU</p>
+                                <p class="ps-4">6</p>
+                                <p class="section-title py-4">MGM IP</p>
+                                <p class="ps-4">0.0.0.0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column align-items-start w-auto gap-5">
+                    <div class="d-flex align-items-center gap-3">
+                        <span>
+                            <input class="input-check" type="checkbox" id="anomaliaRaport">
+                            <label class="customCheckbox" for="anomaliaRaport"></label>
+                        </span>
+                        <span class="text-nowrap mb-2">
+                            Wyłącz z raportowania o anomaliach
+                        </span>
+                    </div>
+                    <div class="px-5 py-3 bg-light-yellow rounded-4 w-100">
+                        <div class="card-body" style="color: #F59E0B;">
+                            <h3 class="bold mt-2">
+                                <img src="./dist/img/left_min.svg" alt="">
+                                Typy zadań Agenta
+                            </h3>
+                            <ul class="list-unstyled">
+                                <li class="custom-list-item my-5">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span>
+                                            <input class="input-check" type="checkbox" id="py00">
+                                            <label class="customCheckbox customCheckbox--orange" for="py00"></label>
+                                        </span>
+                                        <span class="text-nowrap mb-2">
+                                            py00 (Healtcheck procesór DHM Agenta)
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span>
+                                            <input class="input-check" type="checkbox" id="py01">
+                                            <label class="customCheckbox customCheckbox--orange" for="py01"></label>
+                                        </span>
+                                        <span class="text-nowrap mb-2">
+                                            py01 (Worker skanujący certyfikaty)
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span>
+                                            <input class="input-check" type="checkbox" id="py11">
+                                            <label class="customCheckbox customCheckbox--orange" for="py11"></label>
+                                        </span>
+                                        <span class="text-nowrap mb-2">
+                                            py11 (Worker skanujący narzędzia systemowe)
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <span>
+                            <input class="input-check" type="checkbox" id="checkboxPy00-force-restart">
+                            <label class="customCheckbox" for="checkboxPy00-force-restart"></label>
+                        </span>
+                        <span class="text-nowrap mb-2">
+                            Py00 force restart
+                        </span>
+                    </div>
+                    <div class="card rounded-4 w-100 p-3">
+                        <div class="card-body">
+                            <h3 class="section-title mb-5">
+                                <img src="./dist/img/planing.svg" alt="">
+                                Projektowanie
+                            </h3>
+                            <p>Grupa</p>
+                            <p class="ms-4">a|area|d|datacenter|aac|node|no|</p>
+                            <p>Rodzaj powołania</p>
+                            <p class="ms-4">migracja</p>
+                            <p>Projekt</p>
+                            <p class="ms-4">/xxx</p>
+                            <p>Strefa</p>
+                            <p class="ms-4"><span class="status-dot me-2"></span>DMZ (d)</p>
+                            <p>Rola</p>
+                            <p class="ms-4"><span class="status-dot me-2"></span>Aplikacyjny (a)</p>
+                            <p>Nazwa Klastra</p>
+                            <p class="ms-4"><span class="status-dot me-2"></span>Bubemetes Master</p>
+                            <p>Folder</p>
+                            <p class="ms-4">Folder Name</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- @include body_structure -->
+</body>
+
+</html>

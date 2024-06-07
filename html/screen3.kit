@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <!-- @include head_structure -->
+    <title>Screen3</title>
+</head>
+
+<body>
+    <!-- @include nav -->
+    <!-- @include header -->
+    <main>
+        <div class="main-section">
+            <h1 class="mb-5">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb d-flex align-items-center">
+                        <li class="breadcrumb-item"> <img src="./dist/img/pc.svg" alt=""> Wirtualna maszyna</li>
+                        <li class="breadcrumb-item" aria-current="page">VC Foldery
+                            <span class="py-1 px-3 rounded-3"
+                                style="color: #3B82F6; background-color:#DBEAFE ;">:hostname</span>
+                            <span class="bg-warning-subtle py-1 px-3 rounded-3" style="color: #F59E0B;">Tryb
+                                edycji</span>
+                        </li>
+                    </ol>
+                </nav>
+            </h1>
+            <div class="d-flex gap-5 flex-nowrap w-100">
+                <form class="row w-100 g-4">
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Nazwa
+                                Hosta</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Hostname">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>State</label>
+                            <select id="inputState" class="form-select py-4 px-3 fs-4">
+                                <option selected>Tak</option>
+                                <option>Nie</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="status" class="form-label"><span class="text-danger">*</span>VM patch</label>
+                        <input type="text" class="form-control py-4 px-3 fs-4" placeholder="VM patch">
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Folder</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Folder">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>VC ESX</label>
+                            <select id="inputState" class="form-select py-4 px-3 fs-4">
+                                <option selected disabled>ESX Name</option>
+                                <option>option1</option>
+                                <option>option2</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Key</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Key">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Uuid</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Uuid">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span
+                                    class="text-danger">*</span>PowerState</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="PowerState">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Overall
+                                status</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Overall status">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>OS</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="OS">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Kernel</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Kernel">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Memory size
+                                (MB)</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Memory size (MB)">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>Num CPU</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Num CPU">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <label for="hostName" class="form-label"><span class="text-danger">*</span>Guest IP</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="Guest IP">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label"><span class="text-danger">*</span>MGM IP</label>
+                            <input type="text" class="form-control py-4 px-3 fs-4" placeholder="MGM IP">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="status" class="form-label"><span class="text-danger">*</span>VM patch</label>
+                        <select id="inputState" class="form-select py-4 px-3 fs-4">
+                            <option selected disabled>Wybierz nazwę środowiska</option>
+                            <option>nazwa1</option>
+                            <option>nazwa2</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <div class="col-md-6">
+                            <button class="w-100 mt-3 py-4 px-4 rounded-3 text-white border-0"
+                                style="background-color: #569090;">Aktualizuj wirtualną maszynę</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="w-100 mt-3 py-4 px-4 rounded-3 border-0"
+                                style="background-color: #F3F4F6; color: #6B7280;">Anuluj</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="d-flex flex-column align-items-start w-auto gap-5">
+                    <div class="d-flex align-items-center gap-3">
+                        <span>
+                            <input class="input-check" type="checkbox" id="raportoff">
+                            <label class="customCheckbox" for="raportoff"></label>
+                        </span>
+                        <span class="text-nowrap mb-2">
+                            Wyłącz z raportowania o anomaliach
+                        </span>
+                    </div>
+                    <div class="px-5 py-3 bg-light-yellow rounded-4 w-100">
+                        <div class="card-body" style="color: #F59E0B;">
+                            <h3 class="bold mt-2">
+                                <img src="./dist/img/left_min.svg" alt="">
+                                Typy zadań Agenta
+                            </h3>
+                            <ul class="list-unstyled">
+                                <li class="custom-list-item my-5">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span>
+                                            <input class="input-check" type="checkbox" id="py00-2">
+                                            <label class="customCheckbox customCheckbox--orange" for="py00-2"></label>
+                                        </span>
+                                        <span class="text-nowrap mb-2">
+                                            py00 (Healtcheck procesór DHM Agenta)
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span>
+                                            <input class="input-check" type="checkbox" id="py01-2">
+                                            <label class="customCheckbox customCheckbox--orange" for="py01-2"></label>
+                                        </span>
+                                        <span class="text-nowrap mb-2">
+                                            py01 (Worker skanujący certyfikaty)
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span>
+                                            <input class="input-check" type="checkbox" id="py02">
+                                            <label class="customCheckbox customCheckbox--orange" for="py02"></label>
+                                        </span>
+                                        <span class="text-nowrap mb-2">
+                                            py02 (Worker skanujący plik .certs pod kątem zmian)
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span>
+                                            <input class="input-check" type="checkbox" id="py11-2">
+                                            <label class="customCheckbox customCheckbox--orange" for="py11-2"></label>
+                                        </span>
+                                        <span class="text-nowrap mb-2">
+                                            py11 (Worker skanujący narzędzia systemowe)
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span>
+                                            <input class="input-check" type="checkbox" id="py21">
+                                            <label class="customCheckbox customCheckbox--orange" for="py21"></label>
+                                        </span>
+                                        <span class="text-nowrap mb-2">
+                                            py21 (Worker skanujący schematy i wielkość baz danych)
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span>
+                                            <input class="input-check" type="checkbox" id="py31">
+                                            <label class="customCheckbox customCheckbox--orange" for="py31"></label>
+                                        </span>
+                                        <span class="text-nowrap mb-2">
+                                            py31 (Worker skanujący klastry Elasticsearch)
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span>
+                                            <input class="input-check" type="checkbox" id="py61">
+                                            <label class="customCheckbox customCheckbox--orange" for="py61"></label>
+                                        </span>
+                                        <span class="text-nowrap mb-2">
+                                            py61 (Worker skanujące kontener Docker)
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="custom-list-item my-5">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span>
+                                            <input class="input-check" type="checkbox" id="py81">
+                                            <label class="customCheckbox customCheckbox--orange" for="py81"></label>
+                                        </span>
+                                        <span class="text-nowrap mb-2">
+                                            py81 (Worker backupu MySQL)
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="section-title mb-0">
+                        <img src="./dist/img/pen-s3.svg" alt="">
+                        Adnotacje
+                    </h3>
+                    <form class="w-100">
+                        <textarea class="form-control rounded-4 textarea3 py-4 px-4 fs-4" id="exampleTextarea" rows="10"
+                            placeholder="Wpisz tekst tutaj..."></textarea>
+                        </textarea>
+                        <button class="col-btn3 mt-3 py-4 px-4 rounded-3 text-white border-0"
+                            style="background-color: #569090;">Dodaj
+                            adnotacje</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- @include body_structure -->
+</body>
+
+</html>
