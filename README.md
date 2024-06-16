@@ -7,7 +7,7 @@
 
 <br><br>
 
-## Demo 
+## How to start  
 To view the demo you need to go to the link provided below and in the search bar add the following phrases at the end:
 
 <br>
@@ -25,7 +25,11 @@ To view the demo you need to go to the link provided below and in the search bar
 <br>
 /screen4.html
 
+<br><br>
+
 <img src='dist/img/how-to-open.png'>
+
+<br><br>
 
 <a href='https://git-hub-app-sigma.vercel.app/'>View demo</a>
 
