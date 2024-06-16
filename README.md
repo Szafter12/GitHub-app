@@ -1,5 +1,5 @@
 <div align="center">
-<h3 align="center">GitHub App</h3>
+<h1 align="center">GitHub App</h1>
 
   <p align="center">
   This is a github app project made for a client 
@@ -9,8 +9,6 @@
 
 ## Demo 
 To view the demo you need to go to the link provided below and in the search bar add the following phrases at the end:
-
-<img src='dist/img/how-to-open.png'>
 
 <br>
 /login_page.html
@@ -26,6 +24,8 @@ To view the demo you need to go to the link provided below and in the search bar
 
 <br>
 /screen4.html
+
+<img src='dist/img/how-to-open.png'>
 
 <a href='https://git-hub-app-sigma.vercel.app/'>View demo</a>
 
