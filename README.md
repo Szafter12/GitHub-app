@@ -31,12 +31,6 @@ https://git-hub-app-sigma.vercel.app/
 
 <img src='dist/img/how-to-open.png'>
 
-<br><br>
-
-<a href='https://git-hub-app-sigma.vercel.app/'>View demo</a>
-
-<br><br>
-
 ## About The Project
 
 <img src='dist/img/login.png'>
