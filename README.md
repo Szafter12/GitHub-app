@@ -2,7 +2,7 @@
 <h1 align="center">GitHub App</h1>
 
   <p align="center">
-  This is a github app project made for a client 
+  This is a simple project of UI design 
 </div>
 
 <br><br>
